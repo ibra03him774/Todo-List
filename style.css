@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #3a0ca3, #7209b7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 70%;
+  max-width: 800px;
+  background: rgb(88, 36, 176);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Header */
+.task-heading {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+}
+.task-heading input {
+  margin: 20px;
+  padding: 10px;
+  width: 80%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.task-heading input:focus {
+  border-color: gold;
+  box-shadow: 0 0 5px gold;
+}
+
+.task-heading .add-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: #ff006e;
+  border: none;
+  color: white;
+  transition: 0.3s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.task-heading .add-btn i {
+  width: 100%;
+}
+
+.task-heading .add-btn:hover {
+  color: rgb(107, 3, 107);
+  opacity: 0.7; /* 0.7s hatalıydı */
+}
+
+/* Tasks */
+#tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#tasks .task-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(106, 69, 184);
+  border-radius: 10px;
+  transition: 0.3s;
+  text-align: left;
+}
+
+#tasks .task-container:hover {
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Done task */
+#tasks .done {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* Text */
+.txt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-container button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-container button:hover {
+  opacity: 0.7;
+}
+
+.btn-container button i {
+  color: white;
+}
+
+/* Button colors */
+.delete-btn {
+  background-color: rgb(155, 2, 37);
+  font-size: 18px;
+}
+
+.true-btn {
+  background-color: rgb(6, 214, 160);
+  font-size: 18px;
+}
+.cancel-btn {
+  background-color: #3e021c;
+  font-size: 18px;
+}
+
+.edit-btn {
+  background-color: rgb(65, 70, 209);
+  font-size: 18px;
+}
