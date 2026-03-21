@@ -18,56 +18,58 @@ body {
 
 /* Container */
 .container {
-  width: 70%;
+  width: 90%;
   max-width: 800px;
   background: rgb(88, 36, 176);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   overflow: hidden;
+  margin: 10px;
 }
 
 /* Header */
 .task-heading {
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   color: white;
   text-align: center;
-  border-radius: 20px;
-  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .task-heading input {
-  margin: 20px;
+  margin: 15px 0;
   padding: 10px;
-  width: 80%;
+  width: 100%;
+  max-width: 500px;
   height: 50px;
   border-radius: 10px;
   border: none;
   outline: none;
 }
+
 .task-heading input:focus {
   border-color: gold;
   box-shadow: 0 0 5px gold;
 }
 
 .task-heading .add-btn {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   font-size: 20px;
   background: #ff006e;
   border: none;
   color: white;
-  transition: 0.3s;
   border-radius: 10px;
   cursor: pointer;
-}
-
-.task-heading .add-btn i {
-  width: 100%;
+  transition: 0.3s;
 }
 
 .task-heading .add-btn:hover {
   color: rgb(107, 3, 107);
-  opacity: 0.7; /* 0.7s hatalıydı */
+  opacity: 0.8;
 }
 
 /* Tasks */
@@ -80,17 +82,25 @@ body {
 }
 
 #tasks .task-container {
-  width: 90%;
+  width: 95%;
+  max-width: 600px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 15px;
-  margin: 10px;
+  margin: 10px 0;
+
   color: white;
   background-color: rgb(106, 69, 184);
   border-radius: 10px;
+
   transition: 0.3s;
   text-align: left;
+
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #tasks .task-container:hover {
@@ -108,11 +118,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
+  word-break: break-word;
 }
 
 /* Buttons */
 .btn-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -143,6 +156,7 @@ body {
   background-color: rgb(6, 214, 160);
   font-size: 18px;
 }
+
 .cancel-btn {
   background-color: #3e021c;
   font-size: 18px;
@@ -151,4 +165,48 @@ body {
 .edit-btn {
   background-color: rgb(65, 70, 209);
   font-size: 18px;
+}
+
+/* 📱 Tablet & Mobile */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+
+  .task-heading input {
+    height: 45px;
+  }
+
+  .task-heading .add-btn {
+    width: 100%;
+    height: 45px;
+  }
+
+  #tasks .task-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-container button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* 📱 Small devices */
+@media (max-width: 400px) {
+  .task-heading input {
+    font-size: 14px;
+  }
+
+  .btn-container button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 }
