@@ -1,8 +1,8 @@
 let tasks = [
   {
-    title:,
-    date:,
-    isDone:,
+    title: "Finish your JavaScript Course",
+    date: "20/03/2026",
+    isDone: true,
   }
 ];
 
